@@ -1,5 +1,9 @@
 require "moneytest/version"
 
 module Moneytest
-  # Your code goes here...
+  class Money
+    def self.hi
+      puts "hola"
+    end
+  end
 end
