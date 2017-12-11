@@ -51,17 +51,3 @@ end
 
 require_relative './configuration/configuration'
 require_relative './error/handle_error'
-
-# m1 = Money.new(100000, 'EUR')
-# m2 = m1.convert('USD')  
-
-fifty_eur = Money.new(50, 'EUR')
-twenty_eur = Money.new(20, 'EUR')
-twenty_dollars = Money.new(20, 'USD')
-
-p (fifty_eur + twenty_dollars)
-p (fifty_eur - twenty_dollars)
-p (fifty_eur == twenty_dollars)
-p (fifty_eur == fifty_eur)
-p (fifty_eur * fifty_eur)
-p (fifty_eur / fifty_eur)
