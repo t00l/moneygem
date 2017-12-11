@@ -1,5 +1,8 @@
+require_relative './arithmetic/arithmetic'
+
 class Money
   attr_accessor :amount, :currency
+  include Calculate
 
   #################### validación y configuración
   class << self
@@ -50,12 +53,15 @@ require_relative './configuration/configuration'
 require_relative './error/handle_error'
 
 # m1 = Money.new(100000, 'EUR')
-# m2 = m1.convert('EUR')
-# m3 = m1.convert('USD')
-# m4 = m1.convert('Bitcoin')
-# p m1.amount
-# p m1.currency
-# puts m1.inspect
-# puts m2.inspect
-# puts m3.inspect
-# puts m4.inspect
+# m2 = m1.convert('USD')  
+
+fifty_eur = Money.new(50, 'EUR')
+twenty_eur = Money.new(20, 'EUR')
+twenty_dollars = Money.new(20, 'USD')
+
+p (fifty_eur + twenty_dollars)
+p (fifty_eur - twenty_dollars)
+p (fifty_eur == twenty_dollars)
+p (fifty_eur == fifty_eur)
+p (fifty_eur * fifty_eur)
+p (fifty_eur / fifty_eur)
