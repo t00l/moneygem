@@ -51,5 +51,3 @@ end
 
 require_relative './configuration/configuration'
 require_relative './error/handle_error'
-
-
